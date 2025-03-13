@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baby Shower</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Estilos personalizados para imitar la imagen */
+        body {
+          
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15pt;
+            background-color: #f8f9fa; /* Fondo similar al de la imagen */
+            overflow-x: hidden;
+            background-image: url('background.gif'); /* Imagen de fondo */
+            background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
+            background-attachment: fixed; /* Fija la imagen de fondo */
+        }
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.4); /* Fondo semitransparente */
+            height: 65px; /* Altura del navbar */
+            padding: 0px 2px 0px 2px;
+            font-weight: lighter;
+        }
+        .offcanvas{
+            background-color: #e9e9ea; /* Fondo semitransparente */
+        }
+        .navbar-nav .nav-link {
+            color: #212325; /* Color de los enlaces del navbar */
+        }
+        .hero {
+            text-align: left;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 20pt;
+            padding: 100px 2px 15px 2px;
+           /*background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+          /*  backdrop-filter: blur(5px); /* Desenfoque del fondo */
+            border-radius: 10px; /* Bordes redondeados */
+            /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+            width: 100%; /* Ajusta el ancho según sea necesario */
+            height: 100%;
+            text-align: center;
+            z-index: 10000;
+        }
+        .hero h1 {
+            /*font-size: 4rem;*/
+            color: #e8a8a8; /* Color rosado del título */
+            font-family: 'Dancing Script', cursive;font-size: 75pt;
+        }
+        .hero h2 {
+           /* font-size: 4rem;*/
+            color: #e8a8a8; /* Color rosado del título */
+            font-family: 'Dancing Script', cursive;font-size: 50pt;
+        }
+        .hero p {
+            color: #6c757d; /* Color del texto */
+        }
+        .hero .btn-primary {
+            background-color: #e8a8a8; /* Color rosado del botón */
+            border-color: #e8a8a8;
+        }
+        .hero .btn-primary:hover {
+            background-color: #d19292;
+            border-color: #d19292;
+        }
+
+       .hero img {
+            max-width: 40%; /* Ajusta el tamaño de la imagen*/
+        }
+
+        .confirma_asistencia{
+            font-size: 17pt;
+            border-radius: 50px 20px;
+        }
+        .floating-elements {
+            padding: 15px 0px 10px 0px;
+            position: relative;
+        }
+
+        .cloud_container{
+            overflow: hidden;
+        }
+        .cloud {
+            position: absolute;
+            display: inline-block;
+            background-image: url('SVG/cloud.svg');
+            background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
+            width: 180px;
+            height: 100px;
+        }
+
+
+        /* Random cloud positions */
+        .cloud1 { top: 10%; left: 15%; }
+        .cloud2 { top: 20%; left: 50%; }
+        .cloud3 { top: 40%; left: 25%; }
+        .cloud4 { top: 50%; left: 40%; }
+        .cloud5 { top: 62%; left: 30%; }
+        .cloud6 {top: 75%;  left: 28%}
+
+        .cloud1, .cloud2, .cloud3, .cloud4, .cloud5, .cloud6 {
+        animation: moveClouds 10s linear; 
+        }
+
+        .cloud {
+        animation: moveClouds 10s linear;
+        }
+
+        @keyframes moveClouds {
+        0% {
+            transform: translateX(-200px); 
+        }
+        100% {
+            transform: translateX(calc(100vw + 200px));
+           
+        }
+        }
+
+        /* Media query para pantallas más pequeñas (móviles) */
+        @media (max-width: 768px) {
+            body {
+          
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15pt;
+            background-color: #f8f9fa; /* Fondo similar al de la imagen */
+            overflow-x: hidden;
+            background-image: url('background.gif'); /* Imagen de fondo */
+            background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
+            background-attachment: fixed; /* Fija la imagen de fondo */
+            background-position: top center; /* Ajusta la posición para móviles */
+            }
+
+            .cloud1, .cloud3, .cloud5 {
+                display: none; /* Oculta algunas nubes en móviles */
+            }
+            .hero {
+                text-align: left;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 15pt;
+                padding: 100px 15px 15px 15px;
+                background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+                backdrop-filter: blur(1px); /* Desenfoque del fondo */
+                border-radius: 10px; /* Bordes redondeados */
+                /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+                width: 100%; /* Ajusta el ancho según sea necesario */
+                height: 100%;
+                text-align: center;
+                z-index: 10000;
+            }
+            .hero h1 {
+            /*font-size: 4rem;*/
+            color: #e8a8a8; /* Color rosado del título */
+            font-family: 'Dancing Script', cursive;font-size: 70pt;
+            }
+            .hero h2 {
+            /* font-size: 4rem;*/
+                color: #e8a8a8; /* Color rosado del título */
+                font-family: 'Dancing Script', cursive;font-size: 30pt;
+            }
+        }
+
+        /* .floating-elements img {
+            position: absolute;
+        }
+        .floating-elements img.cloud {
+            top: 15px;
+            left: 10%;
+        }
+        .floating-elements img.rabbit {
+            top: 100px;
+            right: 5%;
+        }
+        .floating-elements img.heart {
+            top: 200px;
+            left: 20%;
+        }
+        .floating-elements img.star {
+            bottom: 50px;
+            right: 15%;
+        }
+        .floating-elements img.banner {
+            top: 0;
+            right: 0;
+        } */
+    </style>
+</head>
+<body>
+    <nav class="navbar bg-light fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Baby Shower</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Baby Shower</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">More informacion</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>    
+    <div class="container-fluid hero" style="overflow:hidden ;" >
+        <div class="row align-items-center">
+            <div class="col-md-5" style="z-index: 1000;">
+                <h1>SI! ES NIÑA!</h1>
+                <p>SE PARTE DEL HONORABLE BABY SHOWER DE: </p>
+                <h2 >[NOMBRE DEL BEBE]</h2>
+                <p>SABADP | 25 DE MARZO| 12:30 P.M </p>
+                <p>339 N 11th St</p>
+                <p>Newark-New Jersey</p>
+                <button  type="button" class="btn btn-primary confirma_asistencia" data-bs-toggle="modal" data-bs-target="#mdl_confirma_asistencia">CONFIRMA TU ASISTENCIA</button>
+               
+            </div>
+            <div class="col-md-7 floating-elements" style="z-index: 1000;">
+                <!--<img src="heart.png" alt="Heart" class="heart">
+                <img src="star.png" alt="Star" class="star">
+                <img src="banner.png" alt="Banner" class="banner"> -->
+            </div>
+        </div>
+        <div class="cloud_container" id="cloud_container" style="overflow-x:hidden;">
+            <div class="cloud cloud1">
+
+            </div>
+            <div class="cloud cloud2">
+
+            </div>
+            <div class="cloud cloud3">
+
+            </div>
+            <div class="cloud cloud4">
+
+            </div>
+            <div class="cloud cloud5">
+
+            </div>
+    
+            <div class="cloud cloud6">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="mdl_confirma_asistencia" tabindex="-1" aria-labelledby="lbl_mdl_confirma_asistencia" aria-hidden="true" style="overflow-x: hidden;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <form>
+                    <h5 class="modal-title" id="lbl_mdl_confirma_asistencia">FORMULARIO</h5>
+                    </div>
+                    <div class="modal-body">
+                            <div class="mb-3">
+                                <input required type="text" class="form-control" id="nombre" placeholder="INGRESA TU NOMBRE">
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">HACERLO MAS TARDE</button>
+                        <button type="submit" class="btn btn-primary">ENVIAR AHORA</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- <footer class="bg-light p-3 mt-4">
+        <div class="container text-center">
+            <p>&copy; 2023 Stalin Copa</p>
+        </div>
+    </footer> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const clouds = document.querySelectorAll('.cloud1, .cloud2, .cloud3, .cloud4, .cloud5, .cloud6, .cloud');
+
+        clouds.forEach(cloud => {
+        cloud.addEventListener('animationend', () => {
+            // Elimina el elemento del DOM
+            cloud.remove();
+        });
+        });
+    </script>
+</body>
+</html>
