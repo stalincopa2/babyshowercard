@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Baby Shower Invitación?</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/d30d758eef.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Crees que nuestro futuro bebé es niño o niña?</h1>
+        <div id="buttons">
+            <button id="maleButton" onclick="window.href"><i class="fa-solid fa-person"></i> NIÑO</button>
+            <button id="femaleButton"> <i class="fa-solid fa-person-dress"></i> NIÑA</button>
+        </div>
+        <div id="message" class="hidden">¡Felicidades, has adivinado!</div>
+    </div>
+ <!--<script src="script.js"></script>-->
+</body>
+<script> 
+    let noCount = 0;
+    let maleButton = document.getElementById("maleButton");
+    let femaleButton = document.getElementById("femaleButton");
+    femaleButton.addEventListener("click", function(){
+        window.location.href = "invitation.html"; 
+    });
+
+    maleButton.addEventListener('click', function(){
+        noCount++;
+
+        // Teletransportar el botón "No" a una posición aleatoria
+        // const noButton = document.getElementById('noButton');
+        const x = Math.random() * (window.innerWidth - maleButton.offsetWidth);
+        const y = Math.random() * (window.innerHeight - maleButton.offsetHeight);
+
+        maleButton.style.position = 'absolute';
+        maleButton.style.left = `${x}px`;
+        maleButton.style.top = `${y}px`;
+        let width  = parseFloat(maleButton.style.width)+100;
+        maleButton.style.width = width +"px"
+
+        // Aumentar tamaño del botón "Sí"
+        const femaleButton = document.getElementById('femaleButton');
+        femaleButton.style.fontSize = `${16 + noCount * 4}px`;
+    })
+</script>
+</html>
+

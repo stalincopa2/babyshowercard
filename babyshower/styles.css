@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lobster&family=Pacifico&family=Amatic+SC&family=Great+Vibes&display=swap');
+
+:root {
+  --dancing-script: 'Dancing Script', cursive;
+  --lobster: 'Lobster', cursive;
+  --pacifico: 'Pacifico', cursive;
+  --amatic-sc: 'Amatic SC', cursive;
+  --great-vibes: 'Great Vibes', 
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: 'Dancing Script', cursive;
+  font-size: 18pt; 
+  position: relative;
+  overflow: hidden; /* Para evitar el scroll al caer serpentinas */
+  background-image: url("background2.gif");
+  background-size: cover;
+}
+
+.container {
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#maleButton {
+  font-family:'Montserrat', sans-serif;
+  background-color: #347caa;
+  color: white;
+  font-size: 17pt;
+  border-radius: 50px 20px;
+}
+
+#femaleButton {
+  font-family:'Montserrat', sans-serif;
+  background-color: #e8a8a8;
+  color: white;
+  font-size: 17pt;
+  border-radius: 50px 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.serpentina {
+  position: absolute;
+  top: 0;
+  width: 10px;
+  height: 30px;
+  opacity: 0.8;
+  animation: caer 2s linear forwards;
+}
+
+@keyframes caer {
+  to {
+      transform: translateY(100vh) rotate(360deg); /* Añadir rotación para mayor efecto */
+      opacity: 0;
+  }
+}
