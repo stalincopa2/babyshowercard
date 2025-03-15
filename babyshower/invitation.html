@@ -35,26 +35,23 @@
         .hero {
             text-align: left;
             font-family: 'Montserrat', sans-serif;
-            font-size: 20pt;
-            padding: 100px 2px 15px 2px;
-           /*background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
-          /*  backdrop-filter: blur(5px); /* Desenfoque del fondo */
+            font-size: 16pt;
+            padding: 150px 2px 200px 100px;
             border-radius: 10px; /* Bordes redondeados */
-            /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
             width: 100%; /* Ajusta el ancho según sea necesario */
             height: 100%;
             text-align: center;
-            z-index: 10000;
+            z-index: 1000;
         }
         .hero h1 {
             /*font-size: 4rem;*/
             color: #e8a8a8; /* Color rosado del título */
-            font-family: 'Dancing Script', cursive;font-size: 75pt;
+            font-family: 'Dancing Script', cursive;font-size: 50pt;
         }
         .hero h2 {
            /* font-size: 4rem;*/
             color: #e8a8a8; /* Color rosado del título */
-            font-family: 'Dancing Script', cursive;font-size: 50pt;
+            font-family: 'Dancing Script', cursive;font-size: 30pt;
         }
         .hero p {
             color: #6c757d; /* Color del texto */
@@ -75,14 +72,14 @@
         .confirma_asistencia{
             font-size: 17pt;
             border-radius: 50px 20px;
-        }
-        .floating-elements {
-            padding: 15px 0px 10px 0px;
-            position: relative;
+            margin-top: 20px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
         .cloud_container{
-            overflow: hidden;
+            overflow-x: hidden;
+            z-index: 0;
         }
         .cloud {
             position: absolute;
@@ -91,34 +88,71 @@
             background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
             width: 180px;
             height: 100px;
+            
+        }
+
+        .agenda_tittle{
+            padding-top: 100px;
+            color: #e8a8a8; /* Color rosado del título */
+            font-family: 'Montserrat', sans-serif;
+            font-size: 50pt;
+        }
+
+        .agenda{
+            background-color: rgba(255, 255, 255, 0.7); /* Fondo semitransparente */
+            backdrop-filter: blur(5px); /* Desenfoque del fondo */
+            border-radius: 10px; /* Bordes redondeados */
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .agenda-item {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center; /* Centrar el contenido */
+            
+        }
+        .agenda-item img {
+            width: 100px; /* Ajusta el tamaño de la imagen */
+            height: 100px;
+            border-radius: 50%; /* Hace la imagen circular */
+            object-fit: cover; /* Recorta la imagen para que encaje en el círculo */
+            margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+        }
+        .agenda-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .agenda-item p {
+            font-size: 1rem;
+            color: #6c757d;
+        }
+        .time {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .modal{
+            overflow: hidden;
+        }
+
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none; /* Evita que el canvas interfiera con los clics */
+            z-index: 10010; /* Asegura que esté por encima de todo */
         }
 
 
-        /* Random cloud positions */
-        .cloud1 { top: 10%; left: 15%; }
-        .cloud2 { top: 20%; left: 50%; }
-        .cloud3 { top: 40%; left: 25%; }
-        .cloud4 { top: 50%; left: 40%; }
-        .cloud5 { top: 62%; left: 30%; }
-        .cloud6 {top: 75%;  left: 28%}
 
-        .cloud1, .cloud2, .cloud3, .cloud4, .cloud5, .cloud6 {
-        animation: moveClouds 10s linear; 
-        }
 
-        .cloud {
-        animation: moveClouds 10s linear;
-        }
 
-        @keyframes moveClouds {
-        0% {
-            transform: translateX(-200px); 
-        }
-        100% {
-            transform: translateX(calc(100vw + 200px));
-           
-        }
-        }
 
         /* Media query para pantallas más pequeñas (móviles) */
         @media (max-width: 768px) {
@@ -149,12 +183,11 @@
                 width: 100%; /* Ajusta el ancho según sea necesario */
                 height: 100%;
                 text-align: center;
-                z-index: 10000;
+                z-index: 1000;
             }
             .hero h1 {
-            /*font-size: 4rem;*/
             color: #e8a8a8; /* Color rosado del título */
-            font-family: 'Dancing Script', cursive;font-size: 70pt;
+            font-family: 'Dancing Script', cursive;font-size: 60pt;
             }
             .hero h2 {
             /* font-size: 4rem;*/
@@ -163,29 +196,38 @@
             }
         }
 
-        /* .floating-elements img {
-            position: absolute;
+
+         /* Random cloud positions */
+        .cloud1 { top: 10%; left: 15%; }
+        .cloud2 { top: 20%; left: 50%; }
+        .cloud3 { top: 40%; left: 25%; }
+        .cloud4 { top: 50%; left: 40%; }
+        .cloud5 { top: 62%; left: 30%; }
+        .cloud6 {top: 75%;  left: 28%}
+
+        .cloud1, .cloud2, .cloud3, .cloud4, .cloud5, .cloud6 {
+        animation: moveClouds 10s linear; 
+        overflow: hidden;
         }
-        .floating-elements img.cloud {
-            top: 15px;
-            left: 10%;
+
+        .cloud {
+        animation: moveClouds 10s linear;
+        overflow: hidden;
         }
-        .floating-elements img.rabbit {
-            top: 100px;
-            right: 5%;
+
+        @keyframes moveClouds {
+        0% {
+            transform: translateX(-200px); 
+            overflow: hidden;
         }
-        .floating-elements img.heart {
-            top: 200px;
-            left: 20%;
+        100% {
+            transform: translateX(0px);
+            overflow: hidden;
+           
         }
-        .floating-elements img.star {
-            bottom: 50px;
-            right: 15%;
         }
-        .floating-elements img.banner {
-            top: 0;
-            right: 0;
-        } */
+
+
     </style>
 </head>
 <body>
@@ -195,7 +237,7 @@
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" >
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Baby Shower</h5>
               <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -203,35 +245,34 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link active" aria-current="page" href="#">TARJETA DE INVITACION</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">More informacion</a>
+                  <a class="nav-link" href="#agenda">AGENDA</a>
                 </li>
               </ul>
             </div>
           </div>
         </div>
     </nav>    
-    <div class="container-fluid hero" style="overflow:hidden ;" >
+    <div class="container-fluid hero"  >
         <div class="row align-items-center">
             <div class="col-md-5" style="z-index: 1000;">
-                <h1>SI! ES NIÑA!</h1>
+                <h1>BABY SHOWER</h1>
                 <p>SE PARTE DEL HONORABLE BABY SHOWER DE: </p>
                 <h2 >[NOMBRE DEL BEBE]</h2>
-                <p>SABADP | 25 DE MARZO| 12:30 P.M </p>
+                <br>
+                <p>SABADO | 25 DE MARZO| 12:30 P.M </p>
                 <p>339 N 11th St</p>
                 <p>Newark-New Jersey</p>
                 <button  type="button" class="btn btn-primary confirma_asistencia" data-bs-toggle="modal" data-bs-target="#mdl_confirma_asistencia">CONFIRMA TU ASISTENCIA</button>
-               
             </div>
-            <div class="col-md-7 floating-elements" style="z-index: 1000;">
-                <!--<img src="heart.png" alt="Heart" class="heart">
-                <img src="star.png" alt="Star" class="star">
-                <img src="banner.png" alt="Banner" class="banner"> -->
+            <div class="col-md-7 floating-elements" >
+            
             </div>
         </div>
-        <div class="cloud_container" id="cloud_container" style="overflow-x:hidden;">
+        <!--START CLODUDS-->
+        <div class="cloud_container">
             <div class="cloud cloud1">
 
             </div>
@@ -252,10 +293,46 @@
 
             </div>
         </div>
+         <!--END  CLODUDS-->
     </div>
-
-    <div class="modal fade" id="mdl_confirma_asistencia" tabindex="-1" aria-labelledby="lbl_mdl_confirma_asistencia" aria-hidden="true" style="overflow-x: hidden;">
-        <div class="modal-dialog">
+         <!--START SCHEDULE-->  
+    <div class="container-fluid  agenda" id="agenda">
+        <div class="text-center transparent agenda_tittle">  
+                <h1>AGENDA</h1>
+        </div>
+        <br><br>
+        <div class="row"> 
+            <div class="col-md-4 offset-md-4">
+                <div class="agenda-item">
+                    <p class="time">12:30 P.M</p>
+                    <h3>BIENVENIDA</h3>
+                    <img src="background.gif" alt="Ariane Sove">
+                    <p>Lorem ipsum dolor sit amet</p>    
+                </div>
+                <div class="agenda-item">
+                    <img src="background.gif" alt="Ariane Sove">
+                    <p class="time">12:30 P.M</p>
+                    <h3>JUEGOS</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="agenda-item">
+                    <img src="background.gif" alt="Ariane Sove">
+                    <p class="time">12:30 P.M</p>
+                    <h3>BREAK</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+                <div class="agenda-item">
+                    <img src="background.gif" alt="Ariane Sove">
+                    <p class="time">12:30 P.M</p>
+                    <h3>AGRADECIMIENTOS</h3>
+                    <p>Lorem ipsum dolor sit amet</p>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!--END SCHEDULE-->   
+    <div class="modal fade" id="mdl_confirma_asistencia" tabindex="-1" aria-labelledby="lbl_mdl_confirma_asistencia" aria-hidden="true" >
+        <div class="modal-dialog" style="display:hidden ;">
             <div class="modal-content">
                 <div class="modal-header">
                 <form>
@@ -275,6 +352,25 @@
         </div>
     </div>
 
+    <div class="modal fade" id="mdl_adivinaste" tabindex="2000" aria-labelledby="lbl_mdl_adivinaste" aria-hidden="true" >
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <h5 class="modal-title " id="lbl_mdl_adivinaste"><p class="text-center"> ¡ADIVINASTE!</p></h5>
+                </div>
+                <div class="modal-body">
+                    <p>TENDREMOS UNA HERMOSA NIÑA</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">ACEPTAR</button>
+                </div>
+            </div>
+        </div>
+        <canvas id="confetti-canvas"></canvas>
+    </div>
+
+   
+
     <!-- <footer class="bg-light p-3 mt-4">
         <div class="container text-center">
             <p>&copy; 2023 Stalin Copa</p>
@@ -282,7 +378,37 @@
     </footer> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script>
+        $(document).ready(function(){
+            
+            $('#mdl_adivinaste').modal('show'); // Muestra el modal automáticamente
+            
+            // Lanzar confeti
+            const canvas = document.getElementById('confetti-canvas');
+            const confetti = window.confetti;
+
+            confetti({
+                particleCount: 200, // Cantidad de partículas de confeti
+                spread: 80, // Ángulo de dispersión
+                origin: { y: 0.6 } // Origen del confeti (0.6 = 60% desde la parte superior)
+            });
+
+            // Opcional: Detener el confeti después de unos segundos
+            setTimeout(() => {
+                confetti.reset();
+            }, 10000); // Detener después de 5 segundos
+        });
+
+        document.querySelectorAll('.offcanvas-body .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+            const offcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('offcanvasNavbar'));
+            offcanvas.hide();
+            });
+        });
+        
+        
         const clouds = document.querySelectorAll('.cloud1, .cloud2, .cloud3, .cloud4, .cloud5, .cloud6, .cloud');
 
         clouds.forEach(cloud => {
