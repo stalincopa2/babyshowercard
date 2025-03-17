@@ -1,0 +1,42 @@
+        /* Media query para pantallas más pequeñas (móviles) */
+        @media (max-width: 768px) {
+            body {
+          
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15pt;
+            background-color: #f8f9fa; /* Fondo similar al de la imagen */
+            overflow-x: hidden;
+            background-image: url('../images/background.gif'); /* Imagen de fondo */
+            background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
+            background-attachment: fixed; /* Fija la imagen de fondo */
+            background-position: top center; /* Ajusta la posición para móviles */
+            }
+
+            .cloud1, .cloud3, .cloud5 {
+                display: none; /* Oculta algunas nubes en móviles */
+            }
+            .hero {
+                text-align: left;
+                font-family: 'Montserrat', sans-serif;
+                font-size: 15pt;
+                padding: 100px 15px 15px 15px;
+                background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+                backdrop-filter: blur(1px); /* Desenfoque del fondo */
+                border-radius: 10px; /* Bordes redondeados */
+                /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+                width: 100%; /* Ajusta el ancho según sea necesario */
+                height: 100%;
+                text-align: center;
+                z-index: 1000;
+            }
+            .hero h1 {
+            color: #e8a8a8; /* Color rosado del título */
+            font-family: 'Dancing Script', cursive;font-size: 60pt;
+            }
+            .hero h2 {
+            /* font-size: 4rem;*/
+                color: #e8a8a8; /* Color rosado del título */
+                font-family: 'Dancing Script', cursive;font-size: 30pt;
+            }
+        }
+

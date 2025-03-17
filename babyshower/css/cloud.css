@@ -1,0 +1,50 @@
+.confirma_asistencia{
+    font-size: 17pt;
+    border-radius: 50px 20px;
+    margin-top: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cloud_container{
+    overflow-x: hidden;
+    z-index: 0;
+}
+.cloud {
+    position: absolute;
+    display: inline-block;
+    background-image: url('../images/cloud.svg');
+    background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
+    width: 180px;
+    height: 100px;
+    
+}
+
+/* Random cloud positions */
+.cloud1 { top: 10%; left: 15%; }
+.cloud2 { top: 20%; left: 50%; }
+.cloud3 { top: 40%; left: 25%; }
+.cloud4 { top: 50%; left: 40%; }
+.cloud5 { top: 62%; left: 30%; }
+.cloud6 {top: 75%;  left: 28%}
+ 
+.cloud1, .cloud2, .cloud3, .cloud4, .cloud5, .cloud6 {
+         animation: moveClouds 10s linear; 
+         overflow: hidden;
+}
+ 
+.cloud {
+         animation: moveClouds 10s linear;
+         overflow: hidden;
+}
+ 
+@keyframes moveClouds {
+0% {
+    transform: translateX(-200px); 
+    overflow: hidden;
+}
+100% {
+    transform: translateX(0px);
+    overflow: hidden;           
+}
+}

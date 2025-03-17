@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+  <item>
+    <titulo>TITULO </titulo>
+    <hora>12:30 P.M</hora>
+    <descripcion>Lorem ipsum dolor sit amet</descripcion>
+    <urlimagen>images/background.gif</urlimagen>
+  </item>
+  <item>
+    <titulo>TITULO </titulo>
+    <hora>12:30 P.M</hora>
+    <descripcion>Lorem ipsum dolor sit amet</descripcion>
+    <urlimagen>images/background.gif</urlimagen>
+  </item>
+  <item>
+    <titulo>TITULO </titulo>
+    <hora>12:30 P.M</hora>
+    <descripcion>Lorem ipsum dolor sit amet</descripcion>
+    <urlimagen>images/background.gif</urlimagen>
+  </item>
+  <item>
+    <titulo>TITULO </titulo>
+    <hora>12:30 P.M</hora>
+    <descripcion>Lorem ipsum dolor sit amet</descripcion>
+    <urlimagen>images/background.gif</urlimagen>
+  </item>
+</items>

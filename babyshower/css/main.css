@@ -18,12 +18,18 @@ body {
   font-size: 18pt; 
   position: relative;
   overflow: hidden; /* Para evitar el scroll al caer serpentinas */
-  background-image: url("background2.gif");
+  background-image: url("../images/background2.gif");
   background-size: cover;
 }
 
 .container {
   text-align: center;
+}
+.modal-header,
+.modal-body,
+.modal-footer  {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
 }
 
 button {

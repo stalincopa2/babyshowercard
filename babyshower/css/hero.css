@@ -1,0 +1,36 @@
+.hero {
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16pt;
+    padding: 150px 2px 200px 100px;
+    border-radius: 10px; /* Bordes redondeados */
+    width: 100%; /* Ajusta el ancho según sea necesario */
+    height: 100%;
+    text-align: center;
+    z-index: 1000;
+}
+.hero h1 {
+    /*font-size: 4rem;*/
+    color: #e8a8a8; /* Color rosado del título */
+    font-family: 'Dancing Script', cursive;font-size: 50pt;
+}
+.hero h2 {
+   /* font-size: 4rem;*/
+    color: #e8a8a8; /* Color rosado del título */
+    font-family: 'Dancing Script', cursive;font-size: 30pt;
+}
+.hero p {
+    color: #6c757d; /* Color del texto */
+}
+.hero .btn-primary {
+    background-color: #e8a8a8; /* Color rosado del botón */
+    border-color: #e8a8a8;
+}
+.hero .btn-primary:hover {
+    background-color: #d19292;
+    border-color: #d19292;
+}
+
+.hero img {
+    max-width: 40%; /* Ajusta el tamaño de la imagen*/
+}
