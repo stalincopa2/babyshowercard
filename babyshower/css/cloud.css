@@ -1,9 +1,12 @@
 .confirma_asistencia{
     font-size: 17pt;
     border-radius: 50px 20px;
-    margin-top: 20px;
-    padding: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 10px;
+    padding: 10px;
+    font-family:  var(--dancing-script);
+    -webkit-box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
 }
 
 .cloud_container{
@@ -17,7 +20,6 @@
     background-size: cover; /* Ajusta la imagen al tamaño de la ventana */
     width: 180px;
     height: 100px;
-    
 }
 
 /* Random cloud positions */

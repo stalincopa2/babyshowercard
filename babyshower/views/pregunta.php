@@ -13,7 +13,7 @@ $contenido = "
 </head>
 <body>
     <div class='container'>
-        <h1>¿Crees que nuestro futuro bebé es niño o niña?</h1>
+        <h1>¿CREES QUE NUESTRO FUTURO BEBÉ ES NIÑO O NIÑA?</h1>
         <form method='POST' name='frm_respuesta'>
             <input id='opcion' name='opcion' value='1' type='hidden'>
             <div id='buttons'>
@@ -25,33 +25,20 @@ $contenido = "
     
     <div class='modal fade' id='mdl_fallaste' tabindex='-1' aria-labelledby='mdl_fallaste' aria-hidden='true' style='overflow-x: hidden;'>
         <div class='modal-dialog'>
-            <div class='modal-content'>
-                <div class='modal-header'>
-                    <h5 class='modal-title' id='mdl_title_fallaste'>FALLASTE</h5>
-                    </div>
+            <div class='modal-content  custom_modal'>
                     <div class='modal-body'>
                         <p>SIGUE INTENTANDO</p>
-                    </div>
-                    <div class='modal-footer'>
-                        <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>ACEPTAR</button>
+                        <img src='images/error_gif.gif' data-bs-dismiss='modal' aria-label='Close'>
                     </div>
             </div>
         </div>
-        <canvas id='confetti-canvas'></canvas>
     </div>
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
     <script src='https://code.jquery.com/jquery-3.5.1.slim.min.js'></script>
- <!--<script src='script.js'></script>-->
 </body>
 <script> 
     let noCount = 0;
     let maleButton = document.getElementById('maleButton');
-    // let femaleButton = document.getElementById('femaleButton');
-    // femaleButton.addEventListener('click', function(){
-    //     // window.location.href = 'invitation.html'; 
-    //     const formulario = document.getElementById('miFormulario'); // Reemplaza 'miFormulario' con el ID de tu formulario
-    //     formulario.submit();
-    // });
 
     maleButton.addEventListener('click', function(){
         $('#mdl_fallaste').modal('show'); // Muestra el modal automáticamente

@@ -64,7 +64,7 @@ function invitacionPOST($opcion,$nombre_participante=''){
 
     if ($opcion==1){
         $mdl_mensaje_titulo = "¡ADIVINIASTE!";
-        $mdl_mensaje_cuerpo= "VAMOS A TENER UNA HERMOSA NIÑA";
+        $mdl_mensaje_cuerpo= "VAMOS A TENER UNA NIÑA";
      }
      else if ($opcion==2)
      {

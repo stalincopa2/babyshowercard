@@ -123,22 +123,19 @@ $contenido.= "  </div>
             </div>
         </div>
     </div>
+    <canvas id='confetti-canvas'></canvas>
 
-    <div class='modal fade' id='mdl_adivinaste' tabindex='2000' aria-labelledby='lbl_mdl_adivinaste' aria-hidden='true' >
+    <div class='modal fade' id='mdl_adivinaste' tabindex='-1' aria-labelledby='lbl_mdl_adivinaste' aria-hidden='true' >
         <div class='modal-dialog'>
-            <div class='modal-content'>
-                <div class='modal-header '>
-                    <h5 class='modal-title ' id='lbl_mdl_adivinaste'><p class='text-center'>$mdl_mensaje_titulo</p></h5>
-                </div>
+            <div class='modal-content custom_modal'>
                 <div class='modal-body'>
+                    <img src='images/success_gif.gif' data-bs-dismiss='modal' aria-label='Close'>
+                    <p> !FELICIDADES ADIVINASTE ¡  </p>
                     <p>$mdl_mensaje_cuerpo</p>
-                </div>
-                <div class='modal-footer'>
-                    <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>ACEPTAR</button>
+                    <button type='button' class='btn btn-secondary confirma_asistencia' data-bs-dismiss='modal'>VER TARJETA DE INVITACIÓN</button>
                 </div>
             </div>
         </div>
-        <canvas id='confetti-canvas'></canvas>
     </div>
 
    

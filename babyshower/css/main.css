@@ -14,7 +14,7 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #f0f0f0;
-  font-family: 'Dancing Script', cursive;
+  font-family:var( --dancing-script);
   font-size: 18pt; 
   position: relative;
   overflow: hidden; /* Para evitar el scroll al caer serpentinas */
@@ -25,12 +25,6 @@ body {
 .container {
   text-align: center;
 }
-.modal-header,
-.modal-body,
-.modal-footer  {
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-}
 
 button {
   padding: 10px 20px;
@@ -38,6 +32,8 @@ button {
   margin: 5px;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-family:var(--great-vibes);
+
 }
 
 #maleButton {
@@ -68,6 +64,22 @@ button {
   opacity: 0.8;
   animation: caer 2s linear forwards;
 }
+
+.custom_modal{
+  background-color: transparent;
+  color: #f0f0f0;
+  border: none;
+  justify-content: center;
+  margin-top: 175px;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer  {
+    font-family: var(--great-vibes);
+    text-align: center;
+}
+
 
 @keyframes caer {
   to {
