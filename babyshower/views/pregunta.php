@@ -28,7 +28,7 @@ $contenido = "
             <div class='modal-content  custom_modal'>
                     <div class='modal-body'>
                         <p>SIGUE INTENTANDO</p>
-                        <img src='images/error_gif.gif' data-bs-dismiss='modal' aria-label='Close'>
+                        <img src='https://cdn.pixabay.com/animation/2023/10/16/00/18/00-18-10-985_512.gif' data-bs-dismiss='modal' aria-label='Close' width='125'>
                     </div>
             </div>
         </div>

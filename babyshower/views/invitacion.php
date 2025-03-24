@@ -123,13 +123,12 @@ $contenido.= "  </div>
             </div>
         </div>
     </div>
-    <canvas id='confetti-canvas'></canvas>
-
+    
     <div class='modal fade' id='mdl_adivinaste' tabindex='-1' aria-labelledby='lbl_mdl_adivinaste' aria-hidden='true' >
         <div class='modal-dialog'>
             <div class='modal-content custom_modal'>
                 <div class='modal-body'>
-                    <img src='images/success_gif.gif' data-bs-dismiss='modal' aria-label='Close'>
+                    <img src='https://cdn.pixabay.com/animation/2024/07/16/16/50/16-50-52-689_512.gif' data-bs-dismiss='modal' aria-label='Close' width='125'>
                     <p> !FELICIDADES ADIVINASTE ¡  </p>
                     <p>$mdl_mensaje_cuerpo</p>
                     <button type='button' class='btn btn-secondary confirma_asistencia' data-bs-dismiss='modal'>VER TARJETA DE INVITACIÓN</button>
@@ -138,13 +137,11 @@ $contenido.= "  </div>
         </div>
     </div>
 
-   
+    <canvas id='confetti-canvas'></canvas>
 
-    <!-- <footer class='bg-light p-3 mt-4'>
-        <div class='container text-center'>
-            <p>&copy; 2023 Stalin Copa</p>
-        </div>
-    </footer> -->
+    <footer class='mt-4 text-right'>   
+            <p>&copy; 2025 realizado por Stalin Copa</p>
+    </footer>
 
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js'></script>
     <script src='https://code.jquery.com/jquery-3.5.1.slim.min.js'></script>
